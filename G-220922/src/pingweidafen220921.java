@@ -25,10 +25,10 @@ public class pingweidafen220921 {
             int score = sc.nextInt();
             arr[i] = score;
         }
-        int max = getmax(arr);//获取数组中最高分
-        int min = getmin(arr);//获取数组中最低分
+        int max = getMax(arr);//获取数组中最高分
+        int min = getMin(arr);//获取数组中最低分
         int sum = sum(arr);//对数组进行求和
-        int average = (sum - max - min) / 4;//去掉最高分，去掉最低分，剩余分数4个评委平均值
+        int average = (sum - max - min) / (arr.length - 2);//去掉最高分，去掉最低分，剩余分数4个评委平均值
         System.out.println("平均分数为：" + average);//输出平均值
     }
 
@@ -38,9 +38,9 @@ public class pingweidafen220921 {
     1返回值类型 int
     2参数类型 int arr[]
      */
-    public static int getmax(int arr[]) {
-        int max = 0;
-        for (int i = 0; i < arr.length; i++) {
+    public static int getMax(int arr[]) {
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
             if (arr[i] > max) {
                 max = arr[i];
             }
@@ -56,9 +56,9 @@ public class pingweidafen220921 {
     1返回值类型 int
     2参数类型 int arr[]
      */
-    public static int getmin(int arr[]) {
-        int min = 0;
-        for (int i = 0; i < arr.length; i++) {
+    public static int getMin(int arr[]) {
+        int min = arr[0];
+        for (int i = 1; i < arr.length; i++) {
             if (arr[i] < min) {
                 min = arr[i];
             }
