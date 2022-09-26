@@ -79,6 +79,7 @@ public class StudentSystem {
         s.setAddress(address);
         //往集合中添加学生对象
         array.add(s);
+        System.out.println("添加成功");
     }
 
     /*
@@ -93,11 +94,13 @@ public class StudentSystem {
         String s1 = sc.nextLine();
         for (int i = 0; i < array.size(); i++) {
             Student s = array.get(i);
-            String n = s.getNumber();
-            if (n == s1) {
+
+            if (s.getNumber().equals(s1)) {
                 array.remove(s);
+                break;
             }
         }
+        System.out.println("删除成功");
     }
 
     /*
