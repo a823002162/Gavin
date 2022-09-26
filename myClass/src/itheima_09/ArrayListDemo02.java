@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /*
 ArrayList常用方法：
-public boolean remove (object o)：测除指定的元素，返回删除是否成功
+public boolean remove (object o)：删除指定的元素，返回删除是否成功
 public E remove (int index)：删除指定素引处的元素，返回被删除的元素
 public E set(int index, E element)：修改指定素引处的元素，返回被修改的元素
 public E get(int index)：返回指定素引处的元素
