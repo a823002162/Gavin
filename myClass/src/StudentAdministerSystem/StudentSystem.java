@@ -90,12 +90,12 @@ public class StudentSystem {
     public static void deleteStudent(ArrayList<Student> array) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入要删除学生的学号:");
-        String ll = sc.nextLine();
+        String s1 = sc.nextLine();
         for (int i = 0; i < array.size(); i++) {
             Student s = array.get(i);
             String n = s.getNumber();
-            if (n == ll) {
-                array.remove(array.get(i));
+            if (n == s1) {
+                array.remove(s);
             }
         }
     }
