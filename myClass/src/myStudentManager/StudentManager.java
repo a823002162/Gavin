@@ -60,11 +60,48 @@ public class StudentManager {
     }
 
     //定义一个方法，用于添加学生信息
+   /*
     public static void addStudent(ArrayList<Student> array) {
         //键盘录入学生对象所需要的数据，显示提示信息，提示要输入何种信息
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入学生学号：");
         String sid = sc.nextLine();
+        System.out.println("请输入学生姓名：");
+        String name = sc.nextLine();
+        System.out.println("请输入学生年龄：");
+        String age = sc.nextLine();
+        System.out.println("请输入学生居住地：");
+        String address = sc.nextLine();
+        //创建学生对象，把键盘录入的数据赋值给学生对象的成员变量
+        Student s = new Student();
+        s.setSid(sid);
+        s.setName(name);
+        s.setAge(age);
+        s.setAddress(address);
+        //将学生对象添加到集合中
+        array.add(s);
+        //给出添加成功提示
+        System.out.println("添加学生成功");
+    }
+
+    */
+    public static void addStudent(ArrayList<Student> array) {
+        //键盘录入学生对象所需要的数据，显示提示信息，提示要输入何种信息
+        Scanner sc = new Scanner(System.in);
+        String sid;
+        //为了让sid在while循环外面被访问到,我们将其定义到循环外;
+
+        //为了让程序回到这里,使用循环实现
+        while (true) {
+            System.out.println("请输入学生学号：");
+            sid = sc.nextLine();
+            boolean flag = isUsed(array,sid);
+            if (flag) {
+                System.out.println("您输入的学号已经被使用,请重新输入");
+            } else {
+                break;
+            }
+        }
         System.out.println("请输入学生姓名：");
         String name = sc.nextLine();
         System.out.println("请输入学生年龄：");
@@ -109,16 +146,16 @@ public class StudentManager {
         //如果不存在，显示提示信息
         //如果存在，执行删除/修改操作
         int index = -1;
-        for(int x = 0; x<array.size();x++){
+        for (int x = 0; x < array.size(); x++) {
             Student s = array.get(x);
-            if(s.getSid().equals(s)){
+            if (s.getSid().equals(sid)) {
                 index = x;
                 break;
             }
         }
-        if(index == -1){
+        if (index == -1) {
             System.out.println("该信息不存在，请重新输入");
-        }else{
+        } else {
             array.remove(index);
             System.out.println("删除学生成功");
         }
@@ -138,7 +175,7 @@ public class StudentManager {
     }
 
     //定义一个方法，用于修改学生
-    public static void updateStudent(ArrayList<Student> array){
+    public static void updateStudent(ArrayList<Student> array) {
         /*
         //键盘录入要修改学生学号，显示提示信息
         Scanner sc = new Scanner(System.in);
@@ -175,16 +212,16 @@ public class StudentManager {
         System.out.println("请输入要修改学生的学号：");
         String sid = sc.nextLine();
         int index = -1;
-        for(int i =0;i<array.size();i++){
+        for (int i = 0; i < array.size(); i++) {
             Student s = array.get(i);
-            if(s.getSid().equals(sid)){
+            if (s.getSid().equals(sid)) {
                 index = i;
                 break;
             }
         }
-        if(index == -1){
+        if (index == -1) {
             System.out.println("您输入的信息有误，请重新输入");
-        }else {
+        } else {
 
 
             //键盘录入要修改的学生信息
@@ -210,10 +247,26 @@ public class StudentManager {
                 }
             }
 
-            */array.set(index,s);
+            */
+            array.set(index, s);
             //给出修改成功提示
             System.out.println("修改成功");
 
         }
-}
+    }
+
+    //定义一个方法,判断学生学号是否被使用
+    public static boolean isUsed(ArrayList<Student> array,String sid) {
+        //如果与集合中的某一个学生学号相同,返回true,如果都不相同,返回false
+        boolean flag = false;
+        for (int i = 0; i < array.size(); i++) {
+            Student s = array.get(i);
+
+            if (s.getSid().equals(sid)) {
+                flag = true;
+                break;
+            }
+        }
+        return flag;
+    }
 }
