@@ -6,7 +6,8 @@ public class CatDemo {
         CatOperator co = new CatOperator();
         Cat c = new Cat();
         co.useCat(c);
-        co.getCat();
+        Cat c2 = co.getCat();
+        c2.eat();
     }
 
 }
