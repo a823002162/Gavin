@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/G-220921.iml" filepath="$PROJECT_DIR$/G-220921.iml" />
       <module fileurl="file://$PROJECT_DIR$/G-220922/G-220922.iml" filepath="$PROJECT_DIR$/G-220922/G-220922.iml" />
       <module fileurl="file://$PROJECT_DIR$/G-221017/G-221017.iml" filepath="$PROJECT_DIR$/G-221017/G-221017.iml" />
       <module fileurl="file://$PROJECT_DIR$/G-221019/G-221019.iml" filepath="$PROJECT_DIR$/G-221019/G-221019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaLearningPractice2022.iml" filepath="$PROJECT_DIR$/JavaLearningPractice2022.iml" />
       <module fileurl="file://$PROJECT_DIR$/myClass/myClass.iml" filepath="$PROJECT_DIR$/myClass/myClass.iml" />
       <module fileurl="file://$PROJECT_DIR$/myExtends/myExtends.iml" filepath="$PROJECT_DIR$/myExtends/myExtends.iml" />
     </modules>
