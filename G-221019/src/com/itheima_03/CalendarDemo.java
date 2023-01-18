@@ -9,7 +9,7 @@ Calendar提供了一个类方法getInstance用于获取Calendar对象，其日�
  */
 public class CalendarDemo {
     public static void main(String[] args) {
-        //获取Canlendar对象
+        //获取Calendar对象
         Calendar c = Calendar.getInstance();//多态的形式
         System.out.println(c);
 
