@@ -10,8 +10,8 @@ public class HashDemo {
         //创建学生对象
         Student s1 = new Student("林青霞",30);
         //同一个对象多次调用hashCode()方法返回的哈希值是相同的
-        System.out.println(s1.hashCode());//668386784
-        System.out.println(s1.hashCode());//668386784
+        System.out.println(s1.hashCode()); //668386784
+        System.out.println(s1.hashCode()); //668386784
 
         System.out.println("---------------------------------");
 
